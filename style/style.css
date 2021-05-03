@@ -1,0 +1,234 @@
+div.socialshare div.nivel1{
+	display: table-row;;
+    margin: 10px 0 10px;
+    clear: both;
+}
+div.socialshare div.nivel1 div.socialshare-link {
+	display: table-cell;
+	padding: 0 5px 0 0;
+}
+
+div.socialshare div.socialshare-link a {
+	border: none !important;
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	overflow: hidden;
+	margin-right: 3px;
+	text-indent: -10000px;
+}
+
+div.socialshare a.socialshare-share-links {
+    background: url("../img/social_icons.png") no-repeat -0px 0;
+}
+
+div.socialshare a.socialshare-facebook {
+    background: url("../img/social_icons.png") no-repeat -32px 0;
+}
+
+div.socialshare a.socialshare-twitter {
+    background: url("../img/social_icons.png") no-repeat -64px 0;
+}
+
+div.socialshare a.socialshare-telegram {
+    background: url("../img/social_icons.png") no-repeat -96px 0;
+}
+
+div.socialshare a.socialshare-whatsapp {
+    background: url("../img/social_icons.png") no-repeat -128px 0;
+}
+
+div.socialshare a.socialshare-linkedin {
+    background: url("../img/social_icons.png") no-repeat -160px 0;
+}
+
+div.socialshare a.socialshare-reddit {
+    background: url("../img/social_icons.png") no-repeat -192px 0;
+}
+
+div.socialshare a.socialshare-tumblr {
+    background: url("../img/social_icons.png") no-repeat -224px 0;
+}
+
+div.socialshare a.socialshare-pinterest {
+    background: url("../img/social_icons.png") no-repeat -256px 0;
+}
+
+div.socialshare a.socialshare-blogger {
+    background: url("../img/social_icons.png") no-repeat -288px 0;
+}
+
+div.socialshare a.socialshare-evernote {
+    background: url("../img/social_icons.png") no-repeat -320px 0;
+}
+
+div.socialshare a.socialshare-livejournal {
+    background: url("../img/social_icons.png") no-repeat -352px 0;
+}
+
+div.socialshare a.socialshare-pocket {
+    background: url("../img/social_icons.png") no-repeat -384px 0;
+}
+
+div.socialshare a.socialshare-flipboard {
+    background: url("../img/social_icons.png") no-repeat -416px 0;
+}
+
+div.socialshare a.socialshare-diaspora {
+    background: url("../img/social_icons.png") no-repeat -448px 0;
+}
+
+div.socialshare a.socialshare-instapaper {
+    background: url("../img/social_icons.png") no-repeat -480px 0;
+}
+
+div.socialshare-align-left {
+	text-align: left;
+}
+
+div.socialshare-align-center {
+	text-align: center;
+}
+
+div.socialshare-align-right {
+	text-align: right;
+}
+
+/* ----------------------------------------------------- */
+
+
+.NameHighlights {
+    position:relative;
+}
+
+.NameHighlights div {
+	display: none;
+}
+
+.NameHighlightsHover div {
+	display:block;
+	position:absolute;
+	width: 15em;
+	left:70px;
+	z-index:1000;
+	background-color: #DDD;
+	padding: 5px;
+	border-radius: 4px;
+}
+
+/* ---------------------------------------------- */
+
+#CenterDIV {
+	display: none;
+	touch-action: manipulation;
+	outline: 0;
+	background: #616c7d;
+	opacity: .92;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 9999998;
+	transition: opacity .14s,backdrop-filter .14s;
+	box-sizing: border-box;
+}
+
+.divFloat {
+	display: none;
+	touch-action: manipulation;
+	outline: 0;
+	bottom: 40px;
+	height: auto;
+	padding: 20px;
+	top: 40px;
+	background: #FFF;
+	border: 1px solid #FFF;
+	left: 50%;
+	margin-left: -320px;
+	position: fixed;
+	text-align: center;
+	width: 600px;
+	z-index: 9999999;
+	transition: transform .14s,opacity .14s;
+	border-radius: 6px;
+	overflow: hidden;
+}
+@media (max-width: 640px){
+	.divFloat {
+		border-radius: 0;
+		left: 0;
+		margin-left: auto;
+		width: 100%;
+	}
+}
+.btClickHere {
+	font: inherit;
+	background-color: #587898;
+	color: #FFF;
+	border: solid 1px #587898;
+	-moz-border-radius: 0 7px 7px 0;
+	-webkit-border-radius: 0 7px 7px 0;
+	border-radius: 0 7px 7px 0;
+	cursor: pointer;
+}        
+.btClose {
+	margin: 0 auto;
+	background-color: #FFF;
+	font-weight: bold;
+	color: red;
+	border: none;
+	width: auto; 
+	float: right;
+	clear: both;
+	cursor: pointer; 
+}
+.btClose {
+	color: #FFF;
+	padding: 2px 4px;
+	width: 150px;
+	display: block;    
+	background-color: #FF780B;
+	border: solid 1px #FF780B;
+	border-top-right-radius: 10px 20px;
+	border-bottom-right-radius: 10px 20px;
+	border-bottom-left-radius: 10px 20px;
+	border-top-left-radius: 10px 20px;
+	cursor: pointer;
+}
+
+/* -------------------------------------------------- */
+
+#myInput {
+	background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+	background-position: 10px 12px; /* Position the search icon */
+	background-repeat: no-repeat; /* Do not repeat the icon image */
+	width: 100%; /* Full-width */
+	font-size: 16px; /* Increase font-size */
+	padding: 12px 20px 12px 40px; /* Add some padding */
+	border: 1px solid #ddd; /* Add a grey border */
+	margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL {
+	/* Remove default list styling */
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#myUL li a {
+	border: 1px solid #ddd; /* Add a border to all links */
+	margin-top: -1px; /* Prevent double borders */
+	background-color: #f6f6f6; /* Grey background color */
+	padding: 12px; /* Add some padding */
+	text-decoration: none; /* Remove default text underline */
+	font-size: 18px; /* Increase the font-size */
+	color: black; /* Add a black text color */
+	display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+	background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+

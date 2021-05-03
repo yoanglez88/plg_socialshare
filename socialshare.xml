@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+    <name>Content - Social Share</name>
+    <author>Radio Artemisa</author>
+	<creationDate>April 2020</creationDate>
+	<copyright>Copyright (C) 2018 - Radio Artemisa Station. All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>rdigital.cmad@icrt.cu</authorEmail>
+	<authorUrl>https://www.radioartemisa.icrt.cu</authorUrl>
+	<version>1.0</version>
+    <description>PLG_CONTENT_SOCIALSHARE_DESCRIPTION</description>
+    	<files>
+		<filename plugin="socialshare">socialshare.php</filename>
+		<filename>index.html</filename>
+		<folder>style</folder>
+		<folder>img</folder>	
+		<folder>js</folder>	
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_socialshare.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_socialshare.sys.ini</language>
+		<language tag="es-ES">language/es-ES/es-ES.plg_content_socialshare.ini</language>
+		<language tag="es-ES">language/es-ES/es-ES.plg_content_socialshare.sys.ini</language>
+	</languages>
+    <config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="spacer0" type="spacer" class="text badge badge-primary badge-info" label="PLG_CONTENT_SOCIALSHARE_GENERALSETTINGS_TITLE" />
+				<field name="more_social_networks" type="radio" class="btn-group" default="1" label="PLG_CONTENT_SOCIALSHARE_MORE_SOCIAL_NETWORKS" description="PLG_CONTENT_SOCIALSHARE_MORE_SOCIAL_NETWORKS_DESC" >
+					<option value="0">PLG_CONTENT_SOCIALSHARE_NO</option>
+					<option value="1">PLG_CONTENT_SOCIALSHARE_YES</option>
+				</field>
+				<field name="position" type="list" default="2" label="PLG_CONTENT_SOCIALSHARE_POSITION" description="PLG_CONTENT_SOCIALSHARE_POSITION_DESC">
+				   <option value="0">PLG_CONTENT_SOCIALSHARE_POSITION_BOTH</option>
+				   <option value="1">PLG_CONTENT_SOCIALSHARE_POSITION_TOP</option>
+				   <option value="2">PLG_CONTENT_SOCIALSHARE_POSITION_BOTTOM</option>
+				   <option value="3">PLG_CONTENT_SOCIALSHARE_POSITION_NOTHING</option>
+				</field>
+				<field name="alignment" type="list" default="0" label="PLG_CONTENT_SOCIALSHARE_ALIGNMENT" description="PLG_CONTENT_SOCIALSHARE_ALIGNMENT_DESC">
+				   <option value="0">PLG_CONTENT_SOCIALSHARE_ALIGNMENT_LEFT</option>
+				   <option value="1">PLG_CONTENT_SOCIALSHARE_ALIGNMENT_CENTER</option>
+				   <option value="2">PLG_CONTENT_SOCIALSHARE_ALIGNMENT_RIGHT</option>
+				</field>
+				<field name="show_in_articles" type="radio" class="btn-group" default="1" label="PLG_CONTENT_SOCIALSHARE_SHOW_ARTICLE" description="PLG_CONTENT_SOCIALSHARE_SHOW_ARTICLE_DESC" >
+					<option value="0">PLG_CONTENT_SOCIALSHARE_NO</option>
+					<option value="1">PLG_CONTENT_SOCIALSHARE_YES</option>
+				</field>
+				<field name="show_in_categories" type="radio" class="btn-group" default="0" label="PLG_CONTENT_SOCIALSHARE_SHOW_CATEGORY" description="PLG_CONTENT_SOCIALSHARE_SHOW_CATEGORY_DESC" >
+					<option value="0">PLG_CONTENT_SOCIALSHARE_NO</option>
+					<option value="1">PLG_CONTENT_SOCIALSHARE_YES</option>
+				</field>				
+				<field name="exclude_categories" type="text" default="" size="40" label="PLG_CONTENT_SOCIALSHARE_EXCLUDE_CATEGORY" description="PLG_CONTENT_SOCIALSHARE_EXCLUDE_CATEGORY_DESC" />
+				<field name="exclude_articles" type="text" default="" size="40" label="PLG_CONTENT_SOCIALSHARE_EXCLUDE_ARTICLE" description="PLG_CONTENT_SOCIALSHARE_EXCLUDE_ARTICLE_DESC" />
+				<field name="include_articles" type="text" default="" size="40" label="PLG_CONTENT_SOCIALSHARE_INCLUDE_ARTICLE" description="PLG_CONTENT_SOCIALSHARE_INCLUDE_ARTICLE_DESC" /> 
+				
+				<field name="spacer1" type="spacer" class="text badge badge-primary badge-info" label="PLG_CONTENT_SOCIALSHARE_METATAGS_TITLE" />
+				<field name="website_name" default="" type="text" label="PLG_CONTENT_SOCIALSHARE_WEBSITE_NAME" description="PLG_CONTENT_SOCIALSHARE_WEBSITE_NAME_DESC" />
+				<field name="image_type" type="list" default="image_fulltext" label="PLG_CONTENT_SOCIALSHARE_IMAGE_TYPE" description="PLG_CONTENT_SOCIALSHARE_IMAGE_TYPE_DESC" >
+				   <option value="image_intro">PLG_CONTENT_SOCIALSHARE_IMAGE_TYPE_INTRO</option>
+				   <option value="image_fulltext">PLG_CONTENT_SOCIALSHARE_IMAGE_TYPE_FULL</option>
+				</field>				
+				<field name="facebook_admins" default="" type="text" label="PLG_CONTENT_SOCIALSHARE_FACEBOOK_ADMINS" description="PLG_CONTENT_SOCIALSHARE_FACEBOOK_ADMINS_DESC" />
+				<field name="facebook_appid" default="" type="text" label="PLG_CONTENT_SOCIALSHARE_FACEBOOK_APPID" description="PLG_CONTENT_SOCIALSHARE_FACEBOOK_APPID_DESC" />
+				<field name="facebook_hashtags" default="" type="text" label="PLG_CONTENT_SOCIALSHARE_FACEBOOK_HASHTAGS" description="PLG_CONTENT_SOCIALSHARE_FACEBOOK_HASHTAGS_DESC" />
+				<field name="facebook_frase" default="" type="text" label="PLG_CONTENT_SOCIALSHARE_FACEBOOK_FRASE" description="PLG_CONTENT_SOCIALSHARE_FACEBOOK_FRASE_DESC" />				
+				<field name="twitter_card_author" default="" type="text" label="PLG_CONTENT_SOCIALSHARE_TWITTER_CARD_AUTHOR" description="PLG_CONTENT_SOCIALSHARE_TWITTER_CARD_AUTHOR_DESC" />
+				<field name="twitter_card_type" type="list" default="summary_large_image" label="PLG_CONTENT_SOCIALSHARE_TWITTER_CARDTYPE" description="PLG_CONTENT_SOCIALSHARE_TWITTER_CARDTYPE_DESC">
+					<option value="summary_large_image">PLG_CONTENT_SOCIALSHARE_TWITTER_SUMMARY_LARGE_IMAGE</option>
+					<option value="summary_image">PLG_CONTENT_SOCIALSHARE_TWITTER_SUMMARY_IMAGE</option>
+				</field>
+				<field name="twitter_hashtags" default="" type="text" label="PLG_CONTENT_SOCIALSHARE_TWITTER_HASHTAGS" description="PLG_CONTENT_SOCIALSHARE_TWITTER_HASHTAGS_DESC" />				
+				
+				<field name="spacer2" type="spacer" class="text badge badge-primary badge-info" label="PLG_CONTENT_SOCIALSHARE_BUTTONS_TITLE" />
+				<field name="button_facebook" type="list" default="0" label="PLG_CONTENT_SOCIALSHARE_FACEBOOK_BUTTON" description="PLG_CONTENT_SOCIALSHARE_FACEBOOK_BUTTON_DESC">
+				   <option value="0">PLG_CONTENT_SOCIALSHARE_NIVEL_0</option>
+				   <option value="1">PLG_CONTENT_SOCIALSHARE_NIVEL_1</option>
+				   <option value="2">PLG_CONTENT_SOCIALSHARE_NIVEL_2</option>
+				</field>
+				<field name="button_twitter" type="list" default="0" label="PLG_CONTENT_SOCIALSHARE_TWITTER_BUTTON" description="PLG_CONTENT_SOCIALSHARE_TWITTER_BUTTON_DESC">
+				   <option value="0">PLG_CONTENT_SOCIALSHARE_NIVEL_0</option>
+				   <option value="1">PLG_CONTENT_SOCIALSHARE_NIVEL_1</option>
+				   <option value="2">PLG_CONTENT_SOCIALSHARE_NIVEL_2</option>
+				</field>
+				<field name="button_whatsapp" type="list" default="0" label="PLG_CONTENT_SOCIALSHARE_WHATSAPP_BUTTON" description="PLG_CONTENT_SOCIALSHARE_WHATSAPP_BUTTON_DESC">
+				   <option value="0">PLG_CONTENT_SOCIALSHARE_NIVEL_0</option>
+				   <option value="1">PLG_CONTENT_SOCIALSHARE_NIVEL_1</option>
+				   <option value="2">PLG_CONTENT_SOCIALSHARE_NIVEL_2</option>
+				</field>
+				<field name="button_telegram" type="list" default="0" label="PLG_CONTENT_SOCIALSHARE_TELEGRAM_BUTTON" description="PLG_CONTENT_SOCIALSHARE_TELEGRAM_BUTTON_DESC">
+				   <option value="0">PLG_CONTENT_SOCIALSHARE_NIVEL_0</option>
+				   <option value="1">PLG_CONTENT_SOCIALSHARE_NIVEL_1</option>
+				   <option value="2">PLG_CONTENT_SOCIALSHARE_NIVEL_2</option>
+				</field>
+				<field name="button_linkedin" type="list" default="0" label="PLG_CONTENT_SOCIALSHARE_LINKEDIN_BUTTON" description="PLG_CONTENT_SOCIALSHARE_LINKEDIN_BUTTON_DESC">
+				   <option value="0">PLG_CONTENT_SOCIALSHARE_NIVEL_0</option>
+				   <option value="1">PLG_CONTENT_SOCIALSHARE_NIVEL_1</option>
+				   <option value="2">PLG_CONTENT_SOCIALSHARE_NIVEL_2</option>
+				</field>
+				<field name="button_reddit" type="list" default="0" label="PLG_CONTENT_SOCIALSHARE_REDDIT_BUTTON" description="PLG_CONTENT_SOCIALSHARE_REDDIT_BUTTON_DESC">
+				   <option value="0">PLG_CONTENT_SOCIALSHARE_NIVEL_0</option>
+				   <option value="1">PLG_CONTENT_SOCIALSHARE_NIVEL_1</option>
+				   <option value="2">PLG_CONTENT_SOCIALSHARE_NIVEL_2</option>
+				</field>
+				<field name="button_tumblr" type="list" default="0" label="PLG_CONTENT_SOCIALSHARE_TUMBLR_BUTTON" description="PLG_CONTENT_SOCIALSHARE_TUMBLR_BUTTON_DESC">
+				   <option value="0">PLG_CONTENT_SOCIALSHARE_NIVEL_0</option>
+				   <option value="1">PLG_CONTENT_SOCIALSHARE_NIVEL_1</option>
+				   <option value="2">PLG_CONTENT_SOCIALSHARE_NIVEL_2</option>
+				</field>
+				<field name="button_pinterest" type="list" default="0" label="PLG_CONTENT_SOCIALSHARE_PINTEREST_BUTTON" description="PLG_CONTENT_SOCIALSHARE_PINTEREST_BUTTON_DESC">
+				   <option value="0">PLG_CONTENT_SOCIALSHARE_NIVEL_0</option>
+				   <option value="1">PLG_CONTENT_SOCIALSHARE_NIVEL_1</option>
+				   <option value="2">PLG_CONTENT_SOCIALSHARE_NIVEL_2</option>
+				</field>
+				<field name="button_blogger" type="list" default="0" label="PLG_CONTENT_SOCIALSHARE_BLOGGER_BUTTON" description="PLG_CONTENT_SOCIALSHARE_BLOGGER_BUTTON_DESC">
+				   <option value="0">PLG_CONTENT_SOCIALSHARE_NIVEL_0</option>
+				   <option value="1">PLG_CONTENT_SOCIALSHARE_NIVEL_1</option>
+				   <option value="2">PLG_CONTENT_SOCIALSHARE_NIVEL_2</option>
+				</field>
+				<field name="button_evernote" type="list" default="0" label="PLG_CONTENT_SOCIALSHARE_EVERNOTE_BUTTON" description="PLG_CONTENT_SOCIALSHARE_EVERNOTE_BUTTON_DESC">
+				   <option value="0">PLG_CONTENT_SOCIALSHARE_NIVEL_0</option>
+				   <option value="1">PLG_CONTENT_SOCIALSHARE_NIVEL_1</option>
+				   <option value="2">PLG_CONTENT_SOCIALSHARE_NIVEL_2</option>
+				</field>
+				<field name="button_livejournal" type="list" default="0" label="PLG_CONTENT_SOCIALSHARE_LIVEJOURNAL_BUTTON" description="PLG_CONTENT_SOCIALSHARE_LIVEJOURNAL_BUTTON_DESC">
+				   <option value="0">PLG_CONTENT_SOCIALSHARE_NIVEL_0</option>
+				   <option value="1">PLG_CONTENT_SOCIALSHARE_NIVEL_1</option>
+				   <option value="2">PLG_CONTENT_SOCIALSHARE_NIVEL_2</option>
+				</field>
+				<field name="button_pocket" type="list" default="0" label="PLG_CONTENT_SOCIALSHARE_POCKET_BUTTON" description="PLG_CONTENT_SOCIALSHARE_POCKET_BUTTON_DESC">
+				   <option value="0">PLG_CONTENT_SOCIALSHARE_NIVEL_0</option>
+				   <option value="1">PLG_CONTENT_SOCIALSHARE_NIVEL_1</option>
+				   <option value="2">PLG_CONTENT_SOCIALSHARE_NIVEL_2</option>
+				</field>
+				<field name="button_flipboard" type="list" default="0" label="PLG_CONTENT_SOCIALSHARE_FLIPBOARD_BUTTON" description="PLG_CONTENT_SOCIALSHARE_FLIPBOARD_BUTTON_DESC">
+				   <option value="0">PLG_CONTENT_SOCIALSHARE_NIVEL_0</option>
+				   <option value="1">PLG_CONTENT_SOCIALSHARE_NIVEL_1</option>
+				   <option value="2">PLG_CONTENT_SOCIALSHARE_NIVEL_2</option>
+				</field>
+				<field name="button_diaspora" type="list" default="0" label="PLG_CONTENT_SOCIALSHARE_DIASPORA_BUTTON" description="PLG_CONTENT_SOCIALSHARE_DIASPORA_BUTTON_DESC">
+				   <option value="0">PLG_CONTENT_SOCIALSHARE_NIVEL_0</option>
+				   <option value="1">PLG_CONTENT_SOCIALSHARE_NIVEL_1</option>
+				   <option value="2">PLG_CONTENT_SOCIALSHARE_NIVEL_2</option>
+				</field>
+				<field name="button_instapaper" type="list" default="0" label="PLG_CONTENT_SOCIALSHARE_INSTAPAPER_BUTTON" description="PLG_CONTENT_SOCIALSHARE_INSTAPAPER_BUTTON_DESC">
+				   <option value="0">PLG_CONTENT_SOCIALSHARE_NIVEL_0</option>
+				   <option value="1">PLG_CONTENT_SOCIALSHARE_NIVEL_1</option>
+				   <option value="2">PLG_CONTENT_SOCIALSHARE_NIVEL_2</option>
+				</field>				
+			</fieldset>
+        </fields>
+	</config>
+	
+	<updateservers>
+		<server type="extension" priority="1" name="Social Share Update Server">https://www.radioartemisa.icrt.cu</server>
+	</updateservers>
+</extension>
