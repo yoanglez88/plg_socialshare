@@ -69,6 +69,14 @@
 					<option value="summary_image">PLG_CONTENT_SOCIALSHARE_TWITTER_SUMMARY_IMAGE</option>
 				</field>
 				<field name="twitter_hashtags" default="" type="text" label="PLG_CONTENT_SOCIALSHARE_TWITTER_HASHTAGS" description="PLG_CONTENT_SOCIALSHARE_TWITTER_HASHTAGS_DESC" />				
+				<field name="show_twitter_card" type="radio" class="btn-group" default="1" label="PLG_CONTENT_SOCIALSHARE_SHOW_TWITTER_CARD" description="PLG_CONTENT_SOCIALSHARE_SHOW_TWITTER_CARD_DESC" >
+					<option value="0">PLG_CONTENT_SOCIALSHARE_NO</option>
+					<option value="1">PLG_CONTENT_SOCIALSHARE_YES</option>
+				</field>
+				<field name="show_facebook_card" type="radio" class="btn-group" default="1" label="PLG_CONTENT_SOCIALSHARE_SHOW_FACEBOOK_CARD" description="PLG_CONTENT_SOCIALSHARE_SHOW_FACEBOOK_CARD_DESC" >
+					<option value="0">PLG_CONTENT_SOCIALSHARE_NO</option>
+					<option value="1">PLG_CONTENT_SOCIALSHARE_YES</option>
+				</field>
 				
 				<field name="spacer2" type="spacer" class="text badge badge-primary badge-info" label="PLG_CONTENT_SOCIALSHARE_BUTTONS_TITLE" />
 				<field name="button_facebook" type="list" default="0" label="PLG_CONTENT_SOCIALSHARE_FACEBOOK_BUTTON" description="PLG_CONTENT_SOCIALSHARE_FACEBOOK_BUTTON_DESC">

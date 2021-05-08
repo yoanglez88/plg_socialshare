@@ -300,6 +300,13 @@ class plgContentSocialShare extends JPlugin {
 					$doc->setMetaData('twitter:creator', $twitterCardCreator);
 				}
 			}
+			
+			if($this->params->get('show_facebook_card', 1)) {
+				$doc->addScript('<script async src="https://connect.facebook.net/es/all.js#xfbml=1" charset="utf-8"></script>');
+			}
+			if($this->params->get('show_twitter_card', 1)) {
+				$doc->addScript('<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>');
+			}
 		}
 	
 		// Get plugin contents
