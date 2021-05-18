@@ -302,10 +302,56 @@ class plgContentSocialShare extends JPlugin {
 			}
 			
 			if($this->params->get('show_facebook_card', 1)) {
-				$doc->addScript('<script async src="https://connect.facebook.net/es/all.js#xfbml=1" charset="utf-8"></script>');
-			}
+				$doc->addScript('https://connect.facebook.net/'.$this->langTag.'/all.js#xfbml=1');
+			}			
 			if($this->params->get('show_twitter_card', 1)) {
-				$doc->addScript('<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>');
+				$twitterCode = "
+				function AddTwitterScript(){
+					var js,fjs=document.getElementsByTagName('script')[0];
+					if(!document.getElementById('twitter-wjs')){
+						js=document.createElement('script');
+						js.id='twitter-wjs';
+						js.setAttribute('async', 'true');
+						js.src=\"//platform.twitter.com/widgets.js\";
+						fjs.parentNode.insertBefore(js,fjs);
+					}
+				}
+				window.addEvent('load', function() { AddTwitterScript() });
+				";
+				$doc->addScriptDeclaration($twitterCode);				
+				//$doc->addScript("//platform.twitter.com/widgets.js");
+			}
+			if ($this->params->get('show_linkedin_card', 1)) {
+				$linkedinCode = "
+				function AddInScript(){
+					var js,fjs=document.getElementsByTagName('script')[0];
+					if(!document.getElementById('linkedin-js')){
+						js=document.createElement('script');
+						js.id='linkedin-js';
+						js.setAttribute('async', 'true');
+						js.src=\"//platform.linkedin.com/in.js\";
+						fjs.parentNode.insertBefore(js,fjs);
+					}
+				}
+				window.addEvent('load', function() { AddInScript() });
+				";
+				$document->addScriptDeclaration($linkedinCode);
+			}
+			if ($this->params->get('show_pinterest_card', 1)) {
+				$pinterestCode = "
+				function AddPintScript(){
+					var js,fjs=document.getElementsByTagName('script')[0];
+					if(!document.getElementById('pinterest-js')){
+						js=document.createElement('script');
+						js.id='pinterest-js';
+						js.setAttribute('async', 'true');
+						js.src=\"//assets.pinterest.com/js/pinit.js\";
+						fjs.parentNode.insertBefore(js,fjs);
+					}
+				}
+				window.addEvent('load', function() { AddPintScript() });
+				";
+				$document->addScriptDeclaration($pinterestCode);
 			}
 		}
 	
